@@ -62,6 +62,14 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
           <p><span className="font-semibold">المنتج:</span> {sell.type}</p>
           <p><span className="font-semibold">الكمية:</span> {sell.quantity}</p>
           <p><span className="font-semibold">السعر:</span> {sell.price}</p>
+          <p><span className="font-semibold">الصورة:</span>  <div className=" px-4 py-2">
+  <img
+    src={`http://localhost:4001${sell.imageUrl}`}
+    alt="لا يوجد صورة"
+    className="w-20 h-20 object-cover rounded"
+  />
+</div></p>
+          
           <p><span className="font-semibold">تاريخ الحصد:</span> {sell.harvestYear}</p>
           <p><span className="font-semibold">ملاحظة:</span> {sell.note}</p>
           <div className="mt-2 flex gap-2">
@@ -88,6 +96,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
             <th className="border px-4 py-2 text-center">المنتج</th>
             <th className="border px-4 py-2 text-center">الكمية</th>
             <th className="border px-4 py-2 text-center">السعر</th>
+            <th className="border px-4 py-2 text-center">صورة</th>
             <th className="border px-4 py-2 text-center">تاريخ الحصد</th>
             <th className="border px-4 py-2 text-center">ملاحظة</th>
             <th className="border px-4 py-2 text-center">الإجراء</th>
@@ -103,6 +112,14 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
               <td className="border px-4 py-2">{sell.type}</td>
               <td className="border px-4 py-2">{sell.quantity}</td>
               <td className="border px-4 py-2">{sell.price}</td>
+              <td className="border px-4 py-2">
+  <img
+    src={`http://localhost:4001${sell.imageUrl}`}
+    alt="لا يوجد صورة"
+    className="w-20 h-20 object-cover rounded"
+  />
+</td>
+
               <td className="border px-4 py-2">{sell.harvestYear}</td>
               <td className="border px-4 py-2">{sell.note}</td>
               <td className="border px-4 py-2">
@@ -118,6 +135,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
         </tbody>
       </table>
     </div>
+  
   </div>
   
   );

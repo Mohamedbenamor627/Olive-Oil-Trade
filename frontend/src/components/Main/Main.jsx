@@ -37,7 +37,7 @@ const Video = () => {
   </h1>
 
   <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0">
-    نحن نؤمن أن كل حبة زيتون تحمل قصة أرض مباركة. شاهد الفيديو وتعرّف أكثر على رحلتنا في صناعة زيت الزيتون الأصلي.
+  هدفنا جمع الفلاحين و التجار على طاولة واحدة ،حيث يعرض الفلاح زيته و يشتريه التاجر صاحب أفضل سعر 
   </p>
 
   <div className="flex flex-wrap justify-center gap-4">
