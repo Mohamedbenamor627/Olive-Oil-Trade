@@ -31,8 +31,8 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
 
             <div className="space-y-2">
               <p className="text-gray-600 text-lg">
-                <span className="font-semibold text-gray-800">الكمية:</span>{" "}
-                {oil.quantity}
+                <span className="font-semibold text-gray-800">التاريخ:</span>{" "}
+                {new Date(oil.date).toLocaleDateString("ar-EG")}
               </p>
               <p className="text-green-700 font-semibold text-xl">
                 السعر: {oil.price} <span className="text-base">دينار</span>

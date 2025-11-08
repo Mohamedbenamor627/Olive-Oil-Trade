@@ -6,7 +6,7 @@ const OilsTable = () => {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [editMode, setEditMode] = useState(false);
-  const [newOil, setNewOil] = useState({ type: "", price: "", quantity: "" });
+  const [newOil, setNewOil] = useState({ type: "", price: "", date: "" });
   const [editId, setEditId] = useState(null);
 
 
@@ -46,7 +46,7 @@ const OilsTable = () => {
 
       // إغلاق المودال
       setShowModal(false);
-      setNewOil({ type: "", price: "", quantity: "" });
+      setNewOil({ type: "", price: "", date: "" });
       setEditMode(false);
       setEditId(null);
     } catch (error) {
@@ -72,7 +72,7 @@ const OilsTable = () => {
     setNewOil({
       type: oil.type,
       price: oil.price,
-      quantity: oil.quantity,
+      date: oil.date,
     });
     setEditId(oil._id);
     setEditMode(true);
@@ -90,7 +90,7 @@ const OilsTable = () => {
       onClick={() => {
         setShowModal(true);
         setEditMode(false);
-        setNewOil({ type: "", price: "", quantity: "" });
+        setNewOil({ type: "", price: "", date: "" });
       }}
       className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
     >
@@ -111,7 +111,7 @@ const OilsTable = () => {
           >
             <p><span className="font-semibold">النوع:</span> {oil.type}</p>
             <p><span className="font-semibold">السعر:</span> {oil.price} د.أ</p>
-            <p><span className="font-semibold">الكمية:</span> {oil.quantity}</p>
+            <p><span className="font-semibold">التاريخ:</span> {oil.date}</p>
             <div className="mt-2 flex gap-2">
               <button
                 onClick={() => handleEdit(oil)}
@@ -137,7 +137,7 @@ const OilsTable = () => {
             <tr>
               <th className="border px-4 py-2 text-center">النوع</th>
               <th className="border px-4 py-2 text-center">السعر</th>
-              <th className="border px-4 py-2 text-center">الكمية</th>
+              <th className="border px-4 py-2 text-center">التاريخ</th>
               <th className="border px-4 py-2 text-center">إجراءات</th>
             </tr>
           </thead>
@@ -146,7 +146,7 @@ const OilsTable = () => {
               <tr key={oil._id} className="text-center hover:bg-gray-50">
                 <td className="border px-4 py-2">{oil.type}</td>
                 <td className="border px-4 py-2">{oil.price} د.أ</td>
-                <td className="border px-4 py-2">{oil.quantity}</td>
+                <td className="border px-4 py-2">  {new Date(oil.date).toLocaleDateString("ar-EG")}</td>
                 <td className="border px-4 py-2">
                   <button
                     onClick={() => handleEdit(oil)}
@@ -200,11 +200,11 @@ const OilsTable = () => {
                 required
               />
               <input
-                type="number"
-                placeholder="الكمية"
-                value={newOil.quantity}
+                type="date"
+                placeholder="التاريخ"
+                value={newOil.date}
                 onChange={(e) =>
-                  setNewOil({ ...newOil, quantity: e.target.value })
+                  setNewOil({ ...newOil, date: e.target.value })
                 }
                 className="border p-2 rounded-md"
                 required

@@ -14,13 +14,13 @@ const getOils = async (req, res) => {
 // 🟢 إضافة نوع زيت جديد
 const addOil = async (req, res) => {
   try {
-    const { type, price, quantity } = req.body;
+    const { type, price, date } = req.body;
 
-    if (!type || !price || !quantity) {
+    if (!type || !price || !date) {
       return res.status(400).json({ success: false, message: "يرجى تعبئة جميع الحقول" });
     }
 
-    const oil = await Oil.create({ type, price, quantity });
+    const oil = await Oil.create({ type, price, date });
     res.status(201).json({ success: true, data: oil });
   } catch (err) {
     console.error("❌ فشل في الإضافة:", err);
@@ -32,11 +32,11 @@ const addOil = async (req, res) => {
 const updateOil = async (req, res) => {
   try {
     const { id } = req.params;
-    const { type, price, quantity } = req.body;
+    const { type, price, date } = req.body;
 
     const updatedOil = await Oil.findByIdAndUpdate(
       id,
-      { type, price, quantity },
+      { type, price,date },
       { new: true, runValidators: true }
     );
 

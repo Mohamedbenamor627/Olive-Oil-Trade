@@ -11,8 +11,8 @@ const oilSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    quantity: {
-      type: String,
+    date: {
+      type: Date,
       required: true,
     },
   },
