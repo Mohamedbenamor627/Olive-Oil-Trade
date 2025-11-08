@@ -13,7 +13,7 @@ const LoginPage = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === "MySecretPassword123") { // ضع هنا كلمة المرور
+    if (password === "CauxyzhHiy671€&") { // ضع هنا كلمة المرور
       onLogin(true);
     } else {
       setError("كلمة المرور غير صحيحة!");

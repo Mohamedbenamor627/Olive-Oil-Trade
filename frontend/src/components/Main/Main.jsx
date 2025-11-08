@@ -37,6 +37,8 @@ const Video = () => {
   </h1>
 
   <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0">
+  نحن نؤمن ان كل حبة زيتون تحمل قصة ارض مباركة
+  <br />
   هدفنا جمع الفلاحين و التجار على طاولة واحدة ،حيث يعرض الفلاح زيته و يشتريه التاجر صاحب أفضل سعر 
   </p>
 
