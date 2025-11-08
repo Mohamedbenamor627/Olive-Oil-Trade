@@ -199,10 +199,15 @@ const OilsTable = () => {
                 className="border p-2 rounded-md"
                 required
               />
+
+
+
+
+
               <input
                 type="date"
                 placeholder="التاريخ"
-                value={newOil.date}
+                value={newOil.date ? newOil.date.split("T")[0] : ""} 
                 onChange={(e) =>
                   setNewOil({ ...newOil, date: e.target.value })
                 }

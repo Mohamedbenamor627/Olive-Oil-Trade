@@ -37,9 +37,15 @@ const Video = () => {
   </h1>
 
   <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0">
-  نحن نؤمن ان كل حبة زيتون تحمل قصة ارض مباركة
-  <br />
-  هدفنا جمع الفلاحين و التجار على طاولة واحدة ،حيث يعرض الفلاح زيته و يشتريه التاجر صاحب أفضل سعر 
+
+
+
+"  نحن نؤمن ان كل حبة زيتون تحمل 
+قصة ارض مباركة,
+هدفنا جمع الفلاحين و التجار على طاولة واحدة ،حيث يعرض الفلاح زيته و يشتريه التاجر صاحب أفضل سعر "
+<br />
+<h1 className="w-fit mr-auto text-green-800">محمد بن عمر</h1>
+
   </p>
 
   <div className="flex flex-wrap justify-center gap-4">
