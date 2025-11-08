@@ -82,7 +82,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-600"
-                placeholder="مثلاً: أحمد العجيدي"
+             
                 required
               />
             </div>
@@ -95,7 +95,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-600"
-                placeholder="مثلاً: 0790000000"
+         
                 required
               />
             </div>
@@ -108,7 +108,6 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
                 value={formData.state}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-600"
-                placeholder="مثلاً: عمان، إربد"
                 required
               />
             </div>
@@ -121,7 +120,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
                 value={formData.amount}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-600"
-                placeholder="مثلاً: 50"
+             
                 required
               />
             </div>
@@ -150,7 +149,7 @@ const apiUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
                   value={formData.quantity}
                   onChange={handleChange}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-600"
-                  placeholder="مثلاً: 10"
+              
                   required
                 />
               </div>
